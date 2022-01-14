@@ -1,6 +1,6 @@
 {
   "name": "xlh-lego-components",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "scripts": {
     "build": "npm run clean & npm run build:esm & npm run build:umd",
     "test:watch": "vue-cli-service test:unit --watch",

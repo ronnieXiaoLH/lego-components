@@ -11,6 +11,11 @@
     "clean": "rimraf ./dist",
     "prepublishOnly": "npm run lint & npm run test & npm run build"
   },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm run lint & npm run test"
+    }
+  },
   "main": "dist/xlh-lego-components.umd.js",
   "module": "dist/xlh-lego-components.esm.js",
   "files": [
@@ -36,6 +41,7 @@
     "@vue/test-utils": "^2.0.0-0",
     "eslint": "^6.7.2",
     "eslint-plugin-vue": "^7.0.0-0",
+    "husky": "^4.3.8",
     "rimraf": "^3.0.2",
     "rollup": "^2.63.0",
     "rollup-plugin-css-only": "^3.1.0",

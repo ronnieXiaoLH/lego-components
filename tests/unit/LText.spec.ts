@@ -57,7 +57,7 @@ describe('LText component', () => {
       ...textDefaultProps,
       actionType: 'url',
       url: 'https://www.baidu.com/',
-      tag: 'a',
+      tag: 'h2',
       isEditing: true,
     }
     const wrapper = shallowMount(LText, {
@@ -65,5 +65,6 @@ describe('LText component', () => {
     })
     await wrapper.trigger('click')
     expect(window.location.href).not.toBe('https://www.baidu.com/')
+    expect(wrapper.element.tagName).toBe('H2')
   })
 })
